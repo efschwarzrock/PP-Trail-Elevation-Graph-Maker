@@ -18,3 +18,5 @@ Other keys
  - scroll - zooms in and out
  - middle click/drag - pan
  - There are options at the bottom to customize the UI and the resulting elevation profile
+
+Note: I did this over a weekend, so the code is very messy and ugly, just ignore that.
