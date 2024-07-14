@@ -72,11 +72,6 @@ function draw() {
     if(key == "Backspace"){
         handleUndo();
     }
-
-    if(key == "f"){
-        console.log("remainingPathPoints")
-        console.log(remainingPathPoints)
-    }
   }
 
   function drawTriangle(x, y, size, upsideDown){
@@ -250,6 +245,7 @@ function draw() {
                 }else{
                     elevationPoints[0].previousPoints.push(points[points.length - 2]);
                 }
+                return;
             }
             var pointLocation = 0;
             var secondPointLocation = 0;
@@ -262,7 +258,6 @@ function draw() {
                 }
             } 
             elevationPoints[0].previousPoints = [points[2*pointLocation - secondPointLocation], points[pointLocation]];
-            console.log(elevationPoints[0].previousPoints);
         }else if(elevationPoints.length > 1){
             var newRemainingPoints = poppedPoint.previousPoints;
             for(var i = 0; i < remainingPathPoints.length; i++){
@@ -410,7 +405,6 @@ function draw() {
   }
 
   function initialTrailTrim(closestPoint){
-    console.log(elevationPoints[0].previousPoints)
     var firstEleTrailPoint = new TrailPoint(elevationPoints[0].x, elevationPoints[0].y);
     var firstPointIndex = -1;
     var closestPointIndex = -1;
