@@ -694,6 +694,9 @@ function draw() {
     minElevation = floor(minElevation) - 1;
 
     var lengthSize = sqrt(sq(lengthPoints[0].x - lengthPoints[1].x) + sq(lengthPoints[0].y - lengthPoints[1].y));
+    if(lengthSize < 0.5){
+        lengthSize = 0.5;
+    }
 
     var lineColorInput = document.getElementById('lineColor');
     noFill();
